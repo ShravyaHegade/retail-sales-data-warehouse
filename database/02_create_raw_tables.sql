@@ -1,6 +1,7 @@
 -- Create RAW tables for the retail sales data warehouse.
 -- The RAW layer stores data as received from the source CSV files.
 
+
 -- 1. Customers
 CREATE TABLE IF NOT EXISTS raw.customers (
     customerid TEXT,
@@ -19,8 +20,8 @@ CREATE TABLE IF NOT EXISTS raw.products (
     productname TEXT,
     category TEXT,
     subcategory TEXT,
-    unitprice NUMERIC(10,2),
-    costprice NUMERIC(10,2)
+    unitprice NUMERIC,
+    costprice NUMERIC
 );
 
 
@@ -41,6 +42,6 @@ CREATE TABLE IF NOT EXISTS raw.transactions (
     productid TEXT,
     storeid TEXT,
     quantity INTEGER,
-    discount NUMERIC(5,2),
+    discount NUMERIC,
     paymentmethod TEXT
 );
