@@ -1,0 +1,5 @@
+# dbt generated files
+logs/
+retail_sales_dbt/target/
+retail_sales_dbt/dbt_packages/
+retail_sales_dbt/logs/

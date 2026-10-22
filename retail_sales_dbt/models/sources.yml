@@ -1,0 +1,20 @@
+version: 2
+
+sources:
+  - name: retail_raw
+    database: retail_dw
+    schema: raw
+    description: "Raw retail data loaded from the source CSV files."
+
+    tables:
+      - name: customers
+        description: "Source customer records."
+
+      - name: products
+        description: "Source product records."
+
+      - name: stores
+        description: "Source store records."
+
+      - name: transactions
+        description: "Source transaction records."
