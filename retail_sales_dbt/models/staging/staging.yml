@@ -1,0 +1,72 @@
+
+version: 2
+
+models:
+  - name: stg_customers
+    description: "Cleaned customer data from the raw source."
+    columns:
+      - name: customer_id
+        description: "Unique identifier for each customer."
+        data_tests:
+          - unique
+          - not_null
+
+  - name: stg_products
+    description: "Cleaned product data from the raw source."
+    columns:
+      - name: product_id
+        description: "Unique identifier for each product."
+        data_tests:
+          - unique
+          - not_null
+
+  - name: stg_stores
+    description: "Cleaned store data from the raw source."
+    columns:
+      - name: store_id
+        description: "Unique identifier for each store."
+        data_tests:
+          - unique
+          - not_null
+
+  - name: stg_transactions
+    description: "Cleaned sales transaction data from the raw source."
+    columns:
+      - name: transaction_id
+        description: "Unique identifier for each transaction."
+        data_tests:
+          - unique
+          - not_null
+
+      - name: customer_id
+        description: "Customer associated with the transaction."
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_customers')
+                field: customer_id
+
+      - name: product_id
+        description: "Product associated with the transaction."
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_products')
+                field: product_id
+
+      - name: store_id
+        description: "Store associated with the transaction."
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_stores')
+                field: store_id
+
+      - name: quantity
+        description: "Number of units in the transaction."
+        data_tests:
+          - not_null
+          
