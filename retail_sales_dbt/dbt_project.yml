@@ -37,3 +37,6 @@ models:
     staging:
       +schema: dbt_staging
       +materialized: view
+    warehouse:
+      +schema: dbt_warehouse
+      +materialized: table
