@@ -40,3 +40,6 @@ models:
     warehouse:
       +schema: dbt_warehouse
       +materialized: table
+    marts:
+      +schema: dbt_marts
+      +materialized: table
