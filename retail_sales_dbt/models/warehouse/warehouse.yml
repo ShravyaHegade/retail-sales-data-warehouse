@@ -70,3 +70,43 @@ models:
       - name: quantity
         data_tests:
           - not_null
+
+      - name: customer_key
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_customers')
+                field: customer_key
+
+      - name: product_key
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_product')
+                field: product_key
+
+      - name: store_key
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_store')
+                field: store_key
+
+      - name: date_key
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_date')
+                field: date_key
+
+      - name: payment_method_key
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_payment_method')
+                field: payment_method_key
