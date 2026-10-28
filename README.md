@@ -5,7 +5,7 @@
 [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Database-4169E1?logo=postgresql&logoColor=white)](https://www.postgresql.org/)
 [![dbt](https://img.shields.io/badge/dbt-Transformations-FF694B?logo=dbt&logoColor=white)](https://www.getdbt.com/)
 [![Power BI](https://img.shields.io/badge/Power%20BI-Visualization-F2C811?logo=powerbi&logoColor=black)](https://powerbi.microsoft.com/)
-[![SQL](https://img.shields.io/badge/SQL-Data%20Modeling-4479A1?logo=postgresql&logoColor=white)]
+[![SQL](https://img.shields.io/badge/SQL-Data%20Modeling-4479A1?logo=postgresql&logoColor=white)
 
 ## Dashboard Preview
 
